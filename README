@@ -1,0 +1,9 @@
+The associated programs are designed to get rid of the cruft that builds up over the lifetime of an Svn repo.
+
+These scripts will take a git repo, look at all the files that currently exist, parse commits going backwards for all instances of that file blob, and eventually build a big list of the hashes of all the files we want to keep. Then it will remove all file objects that do not correspond to the hashes we want to keep.
+
+I believe this will remove all the file blobs you don't care about anymore, though you'll likely still have trees and commits that may be irrelevant now. That doesn't matter really though, the file blobs are what you want to get rid of.
+
+Usage:
+
+Modify 
